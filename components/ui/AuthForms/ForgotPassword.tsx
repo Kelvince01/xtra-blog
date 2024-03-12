@@ -52,6 +52,7 @@ export default function ForgotPassword({ allowEmail, redirectMethod, disableButt
             )}
             <p>
                 <Link href="/signin/signup" className="font-light text-sm">
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
                     Don't have an account? Sign up
                 </Link>
             </p>
