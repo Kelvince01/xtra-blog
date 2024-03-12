@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../styles/globals.css';
 import { getURL } from '@/utils/helpers';
 import React, { PropsWithChildren, Suspense } from 'react';
 import { Toaster } from '@/components/ui/Toasts/toaster';
+import Header from '@/app/_partials/Header';
+import Footer from '@/app/_partials/Footer';
+
+import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const meta = {
-    title: 'Next.js Subscription Starter',
-    description: 'Brought to you by Vercel, Stripe, and Supabase.',
+    title: 'Xtra Blog',
+    description: 'Blog made using Vercel, Next.js, Tailwindcss, and Supabase.',
     cardImage: '/og.png',
     robots: 'follow, index',
     favicon: '/favicon.ico',
@@ -23,8 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
         referrer: 'origin-when-cross-origin',
         keywords: ['Vercel', 'Supabase', 'Next.js', 'Stripe', 'Subscription'],
         authors: [{ name: 'Vercel', url: 'https://vercel.com/' }],
-        creator: 'Vercel',
-        publisher: 'Vercel',
+        creator: 'Kelvince Phillips',
+        publisher: 'Kelvince Phillips',
         robots: meta.robots,
         icons: { icon: meta.favicon },
         metadataBase: new URL(meta.url),
@@ -38,8 +41,8 @@ export async function generateMetadata(): Promise<Metadata> {
         },
         twitter: {
             card: 'summary_large_image',
-            site: '@Vercel',
-            creator: '@Vercel',
+            site: '@Kelvince_',
+            creator: '@Kelvince_',
             title: meta.title,
             description: meta.description,
             images: [meta.cardImage]
@@ -52,7 +55,9 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         <html lang="en">
             <body className={inter.className}>
                 <main id="skip" className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]">
+                    <Header />
                     {children}
+                    <Footer />
                 </main>
 
                 <Suspense>

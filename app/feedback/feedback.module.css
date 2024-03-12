@@ -1,0 +1,11 @@
+.iframe {
+    /*frameborder: 0;*/
+    /*margin-height: 0;*/
+    /*margin-width: 0;*/
+}
+
+.mapFrame {
+    position: absolute;
+    inset: 0px;
+    filter: grayscale(1) contrast(1.2) opacity(0.4);
+}

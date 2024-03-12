@@ -4,8 +4,8 @@ export type Article = BaseType & {
     title: string;
     slug: string;
     description: string;
-    image: string;
-    tags: string[];
+    image?: string;
+    tags?: string[];
     content: string;
-    category: number | number[];
+    category: number | number[] | string;
 };
